@@ -2,9 +2,9 @@
 
 namespace Dravencms\AdminModule\IssueModule;
 
-use Dravencms\AdminModule\Components\Issue\IssueDetailFactory;
-use Dravencms\AdminModule\Components\Issue\IssueFormFactory;
-use Dravencms\AdminModule\Components\Issue\IssueGridFactory;
+use Dravencms\AdminModule\Components\Issue\IssueDetail\IssueDetailFactory;
+use Dravencms\AdminModule\Components\Issue\IssueForm\IssueFormFactory;
+use Dravencms\AdminModule\Components\Issue\IssueGrid\IssueGridFactory;
 use Dravencms\AdminModule\SecuredPresenter;
 use Gitlab\Model\Issue;
 use Nette;

@@ -1,0 +1,3 @@
+- Dravencms\AdminModule\Components\Issue\IssueGrid\IssueGridFactory
+- Dravencms\AdminModule\Components\Issue\IssueForm\IssueFormFactory
+- Dravencms\AdminModule\Components\Issue\IssueDetail\IssueDetailFactory

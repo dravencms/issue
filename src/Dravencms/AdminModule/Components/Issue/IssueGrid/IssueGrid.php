@@ -19,7 +19,7 @@
  * MA 02110-1301  USA
  */
 
-namespace Dravencms\AdminModule\Components\Issue;
+namespace Dravencms\AdminModule\Components\Issue\IssueGrid;
 
 use Dravencms\Components\BaseGridFactory;
 use App\Model\Locale\Repository\LocaleRepository;

@@ -18,7 +18,7 @@
  * MA 02110-1301  USA
  */
 
-namespace Dravencms\AdminModule\Components\Issue;
+namespace Dravencms\AdminModule\Components\Issue\IssueDetail;
 
 use Gitlab\Model\Issue;
 use Nette\Application\UI\Control;
