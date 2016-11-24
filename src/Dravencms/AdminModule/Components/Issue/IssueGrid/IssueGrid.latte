@@ -1,0 +1,4 @@
+<div n:foreach="$flashes as $flash" class="alert {$flash->type}">{$flash->message|noescape}</div>
+{if !$gitlabError}
+    {control grid}
+{/if}

@@ -1,0 +1,19 @@
+{if $issue}
+
+<div class="page-header"><h1>#{$issue->iid}</h1>
+</div>
+<div class="panel panel-{if $issue->isClosed()}success{else}danger{/if}">
+    <div class="panel-heading">
+        <h3 class="panel-title">{$issue->title} {if $issue->isClosed()}<span class="label label-success">{_"Closed"}</span>{else}<span class="label label-danger">{_"Opened"}</span>{/if}</h3>
+        {foreach $issue->labels AS $label}
+            <span class="label label-default" style="background: {$label->color|noescape};">{$label->name}</span>
+        {/foreach}
+        <a class="pull-right" href="{plink Issue:edit, $issue->id}"><span class="fa fa-pencil"></span></a>
+    </div>
+    <div class="panel-body">
+        {$issue->description|markdownExtra|noescape}
+    </div>
+</div>
+{else}
+    <div class="alert alert-warning">Nothing to show here</div>
+{/if}

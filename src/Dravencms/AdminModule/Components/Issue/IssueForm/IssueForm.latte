@@ -1,0 +1,41 @@
+<div n:foreach="$flashes as $flash" class="alert {$flash->type}">{$flash->message|noescape}</div>
+{if !$gitlabError}
+<form n:name="form" class="panel form-horizontal">
+    <ul class="alert alert-danger" n:if="$form->hasErrors()">
+        <li n:foreach="$form->errors as $error">{$error}</li>
+    </ul>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group no-margin-hr">
+                    <label class="control-label" n:name="title">{_"Title"}</label>
+                    <input type="text" n:name="title" autofocus="autofocus" class="form-control" placeholder="{_'Brief issue title'}">
+                </div>
+            </div><!-- col-sm-12 -->
+        </div><!-- row -->
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group no-margin-hr">
+                    <label class="control-label" n:name="description">{_"Description"}</label>
+                    <textarea n:name="description" class="form-control" placeholder="{_'Long issue description...'}"></textarea>
+                </div>
+            </div><!-- col-sm-12 -->
+        </div><!-- row -->
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group no-margin-hr">
+                    <label class="control-label" n:name="labels">{_"Labels"}</label>
+                    <select n:name="labels" class="form-control"></select>
+                </div>
+            </div><!-- col-sm-12 -->
+        </div><!-- row -->
+
+    </div>
+
+    <div class="panel-footer">
+        <input type="submit" n:name="send" class="btn btn-success button" value="{_"Save"}">
+    </div>
+</form>
+{/if}
