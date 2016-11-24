@@ -2,7 +2,7 @@
 
 namespace Dravencms\Issue\Console;
 
-use App\Model\User\Repository\AclResourceRepository;
+use Dravencms\Model\User\Repository\AclResourceRepository;
 use Kdyby\Doctrine\EntityManager;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -26,7 +26,7 @@ class UninstallCommand extends Command
         $entityManager = $this->getHelper('container')->getByType('Kdyby\Doctrine\EntityManager');
         
         /** @var AclResourceRepository $aclResourceRepository */
-        $aclResourceRepository = $this->getHelper('container')->getByType('App\Model\User\Repository\AclResourceRepository');
+        $aclResourceRepository = $this->getHelper('container')->getByType('Dravencms\Model\User\Repository\AclResourceRepository');
 
         try {
 
