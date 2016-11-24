@@ -20,8 +20,8 @@
 
 namespace Dravencms\AdminModule\Components\Issue\IssueDetail;
 
+use Dravencms\Components\BaseControl\BaseControl;
 use Gitlab\Model\Issue;
-use Nette\Application\UI\Control;
 use Salamek\Gitlab\Gitlab;
 
 /**
@@ -29,7 +29,7 @@ use Salamek\Gitlab\Gitlab;
  *
  * @author Adam Schubert <adam.schubert@sg1-game.net>
  */
-class IssueDetail extends Control
+class IssueDetail extends BaseControl
 {
     /** @var Gitlab */
     private $gitlab;

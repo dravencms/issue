@@ -21,11 +21,11 @@
 
 namespace Dravencms\AdminModule\Components\Issue\IssueGrid;
 
-use Dravencms\Components\BaseGridFactory;
+use Dravencms\Components\BaseControl\BaseControl;
+use Dravencms\Components\BaseGrid\BaseGridFactory;
 use Dravencms\Model\Locale\Repository\LocaleRepository;
 use Gitlab\Exception\RuntimeException;
 use Michelf\MarkdownExtra;
-use Nette\Application\UI\Control;
 use Nette\Utils\Html;
 use Nette\Utils\Strings;
 use Salamek\Gitlab\Gitlab;
@@ -35,7 +35,7 @@ use Salamek\Gitlab\Gitlab;
  *
  * @author Adam Schubert <adam.schubert@sg1-game.net>
  */
-class IssueGrid extends Control
+class IssueGrid extends BaseControl
 {
 
     /** @var BaseGridFactory */

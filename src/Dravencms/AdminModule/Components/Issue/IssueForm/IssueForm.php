@@ -20,10 +20,10 @@
 
 namespace Dravencms\AdminModule\Components\Issue\IssueForm;
 
-use Dravencms\Components\BaseFormFactory;
+use Dravencms\Components\BaseControl\BaseControl;
+use Dravencms\Components\BaseForm\BaseFormFactory;
 use Gitlab\Exception\RuntimeException;
 use Gitlab\Model\Issue;
-use Nette\Application\UI\Control;
 use Nette\Application\UI\Form;
 use Salamek\Gitlab\Gitlab;
 
@@ -32,7 +32,7 @@ use Salamek\Gitlab\Gitlab;
  *
  * @author Adam Schubert <adam.schubert@sg1-game.net>
  */
-class IssueForm extends Control
+class IssueForm extends BaseControl
 {
     /** @var BaseFormFactory */
     private $baseFormFactory;
