@@ -22,7 +22,7 @@
 namespace Dravencms\AdminModule\Components\Issue\IssueGrid;
 
 use Dravencms\Components\BaseGridFactory;
-use App\Model\Locale\Repository\LocaleRepository;
+use Dravencms\Model\Locale\Repository\LocaleRepository;
 use Gitlab\Exception\RuntimeException;
 use Michelf\MarkdownExtra;
 use Nette\Application\UI\Control;
