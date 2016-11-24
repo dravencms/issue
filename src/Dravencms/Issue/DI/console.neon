@@ -1,2 +1,2 @@
-- Dravencms\Faq\Console\InstallCommand
-- Dravencms\Faq\Console\UninstallCommand
+- Dravencms\Issue\Console\InstallCommand
+- Dravencms\Issue\Console\UninstallCommand
