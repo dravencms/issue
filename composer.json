@@ -1,6 +1,6 @@
 {
   "name": "dravencms/issue",
-  "type": "library",
+  "type": "dravencms-package",
   "description": "Issue module for dravencms",
   "keywords": [
     "dravencms",
@@ -22,6 +22,19 @@
   "autoload": {
     "psr-0": {
       "Dravencms\\": "src/"
+    }
+  },
+  "extra": {
+    "dravencms": {
+      "configuration": {
+        "extensions": {
+          "timeline": "Dravencms\\Issue\\DI\\IssueExtension"
+        }
+      },
+      "scripts": {
+        "post-install": "Dravencms\\Issue\\Script\\PostInstall",
+        "pre-uninstall": "Dravencms\\Issue\\Script\\PreUninstall"
+      }
     }
   }
 }
