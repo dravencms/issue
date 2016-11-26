@@ -28,7 +28,7 @@
     "dravencms": {
       "configuration": {
         "extensions": {
-          "timeline": "Dravencms\\Issue\\DI\\IssueExtension"
+          "issue": "Dravencms\\Issue\\DI\\IssueExtension"
         }
       },
       "scripts": {
