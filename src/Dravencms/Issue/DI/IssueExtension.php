@@ -27,7 +27,6 @@ class IssueExtension extends Nette\DI\CompilerExtension
             ->setClass('Dravencms\Latte\Issue\Filters\Markdown')
             ->setInject(FALSE);
 
-        $this->loadCmsComponents();
         $this->loadComponents();
         $this->loadModels();
         $this->loadConsole();
@@ -76,21 +75,6 @@ class IssueExtension extends Nette\DI\CompilerExtension
         ];
 
         return parent::getConfig($defaults, $expand);
-    }
-
-    protected function loadCmsComponents()
-    {
-        $builder = $this->getContainerBuilder();
-        foreach ($this->loadFromFile(__DIR__ . '/cmsComponents.neon') as $i => $command) {
-            $cli = $builder->addDefinition($this->prefix('cmsComponent.' . $i))
-                ->addTag(CmsExtension::TAG_COMPONENT)
-                ->setInject(FALSE); // lazy injects
-            if (is_string($command)) {
-                $cli->setImplement($command);
-            } else {
-                throw new \InvalidArgumentException;
-            }
-        }
     }
 
     protected function loadComponents()
