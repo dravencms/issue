@@ -31,8 +31,15 @@
     "dravencms": {
       "configuration": {
         "extensions": {
-          "issue": "Dravencms\\Issue\\DI\\IssueExtension"
+          "issue": "Dravencms\\Issue\\DI\\IssueExtension",
+          "gitlab": "Salamek\\Gitlab\\DI\\GitlabExtension"
+        },
+        "gitlab": {
+          "gitlabUrl": "https://gitlab.salamek.cz/api/v3",
+          "gitlabToken": "",
+          "projectName": "sadam/dravencms"
         }
+
       },
       "scripts": {
         "post-install": "Dravencms\\Issue\\Script\\PostInstall",
