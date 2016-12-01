@@ -15,6 +15,7 @@
     }
   ],
   "require": {
+    "dravencms/admin": "@dev"
   },
   "require-dev": {
     "nette/tester": "@dev"
