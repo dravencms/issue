@@ -19,8 +19,10 @@ class AdminMenuFixtures extends AbstractFixture implements DependentFixtureInter
      */
     public function load(ObjectManager $manager)
     {
-        $child = new Menu('Issues', ':Admin:Structure:Structure', 'fa-bug', $this->getReference('user-acl-operation-issue-edit'));
+        $child = new Menu('Issues', ':Admin:Issue:Issue', 'fa-bug', $this->getReference('user-acl-operation-issue-edit'));
         $manager->persist($child);
+
+        $manager->flush();
     }
     /**
      * Get the order of this fixture
