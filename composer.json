@@ -15,8 +15,8 @@
     }
   ],
   "require": {
-    "dravencms/admin": "@dev",
-    "dravencms/locale": "@dev",
+    "dravencms/admin": "dev-master",
+    "dravencms/locale": "dev-master",
     "salamek/nette-gitlab": "dev-master",
     "michelf/php-markdown": "^1.6"
   },
