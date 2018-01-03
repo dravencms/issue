@@ -1,16 +1,13 @@
 <?php
 
 namespace Dravencms\Issue;
-
+use Nette;
 
 /**
  * Class Issue
  * @package Dravencms\Issue
  */
-class Issue extends \Nette\Object
+class Issue
 {
-
-    public function __construct()
-    {
-    }
+    use Nette\SmartObject;
 }
